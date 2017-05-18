@@ -23,14 +23,14 @@ public class Building extends Sprite
 	public void draw(GraphicsContext gc)
 	{
 		if(color == 1)
-		{ 
+		{
 			gc.setFill(Color.GRAY);
 			gc.fillRect(x-size/2, y-size/2, size, size); 
 			gc.setFill(Color.DARKGRAY); 
 			gc.fillRect(x-size/4+4, y-size/1+0.5, size/3.03, size/2.03); 
 		} 
 		
-		if(color ==2)
+		if(color == 2)
 		{ 
 			gc.setFill(Color.BLACK);
 			gc.fillRect(x-size/2, y-size/2, size, size); 
@@ -38,7 +38,7 @@ public class Building extends Sprite
 			gc.fillRect(x-size/4+4, y-size/1+0.5, size/3.03, size/2.03); 
 		}
 		
-		if(color ==3)
+		if(color == 3)
 		{ 
 			gc.setFill(Color.DARKBLUE);
 			gc.fillRect(x-size/2, y-size/2, size, size); 
