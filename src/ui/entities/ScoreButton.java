@@ -2,30 +2,25 @@ package ui.entities;
 
 import interfaces.Sprite;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
-public class NextButton extends Sprite
+public class ScoreButton extends Sprite
 {
 	private int x;
 	private int y;
 	private final int width; 
-	final int height = 50;
-	
+	private int height;
 	private Color color;
-	private String text;
+	private double score;
 	
-	public NextButton(int x, int y, int size, Color color, String word)
+	public ScoreButton(int x, int y, int size, Color color, double score)
 	{
 		this.x = x;
 		this.y = y; 
 		this.width = size; 
+		this.height = size;
 		this.color = color;
-		this.text = word;
-		
-		// set on clicker handler
+		this.score = score;
 	}
 
 	public void draw(GraphicsContext gc)
@@ -34,13 +29,17 @@ public class NextButton extends Sprite
 		gc.fillRect(x,  y,  width, height);
 
 		gc.setFill(Color.BLACK);
-		gc.fillText(text, x + height*3/5, y + height*3/5);
+		gc.fillText(String.valueOf((int)score), x + width/3, y + height*3/5);
 	}
 
 	@Override
 	public boolean isAlive() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public void setScore(double score) {
+		this.score = score;
 	}
 
 }

@@ -1,8 +1,8 @@
 package ui.entities;
 
+import interfaces.Sprite;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import lib.Sprite;
 
 public class FlashCard extends Sprite
 {
@@ -45,21 +45,29 @@ public class FlashCard extends Sprite
 		System.out.println("Building.checkHit not implemented. Returning false"); 
 		return false;
 	}
-	
-	public int getX()
-	{ 
+
+	@Override
+	public boolean isAlive() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getX() {
 		return x;
 	}
-	
-	public int getY()
-	{ 
-		return y; 
+
+	public void setX(int x) {
+		this.x = x;
 	}
-	
-	public int getSize()
-	{ 
-		return size; 
+
+	public int getY() {
+		return y;
 	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
 	public Color getColor() {
 		return color;
 	}
@@ -68,20 +76,29 @@ public class FlashCard extends Sprite
 		this.color = color;
 	}
 
-	public boolean isAlive() {
-		return alive;
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public String[] getAnswers() {
+		return answers;
+	}
+
+	public void setAnswers(String[] answers) {
+		this.answers = answers;
+	}
+
+	public int getSize() {
+		return size;
 	}
 
 	public void setAlive(boolean alive) {
 		this.alive = alive;
 	}
 
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public void setY(int y) {
-		this.y = y;
-	}
-
+	
 }
